@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.container
+{
+    @apply max-w-[90rem] p-6 w-full mx-auto;
+}
+
+@layer components
+{
+    .header
+    {
+        @apply bg-light shadow-md relative;
+    }
+
+    .branding
+    {
+        @apply md:flex items-center gap-12
+    }
+    .branding img
+    {
+        @apply w-14;
+    }
+
+    .branding .header__navd
+    {
+        @apply hidden md:flex gap-10;
+    }
+
+    .branding .header__navd li a
+    {
+        @apply font-medium text-sm text-black hover:text-berde;
+    }
+
+    .header__action
+    {
+        @apply bg-light absolute top-[6.2rem] right-0 w-[0] h-[90vh] px-0 pt-0 overflow-hidden transition-all shadow-md md:static md:h-fit md:w-fit md:shadow-none;
+
+    }
+    .header__action.open
+    {
+        @apply w-[80%] px-10 pt-10 transition-all;
+    }
+
+    .header__action .header__navm
+    {
+        @apply border-b-gray-400 border-b-[2px] pb-5 flex 
+        flex-col gap-5 md:hidden;
+    }
+
+    .header__action .header__navm li:hover a
+    {
+        @apply text-berde;
+    }
+    .header__action .header__navm li a
+    {
+        @apply font-medium text-xl text-black;
+    }
+
+    .header__action .header__btn a
+    {
+       @apply flex gap-[1rem] items-center hover:text-berde
+    }
+
+    .header__action .header__btn
+    {
+        @apply pt-5 flex flex-col gap-3 
+        md:flex-row-reverse md:p-2;
+    }
+    .header__action .header__kamote
+    {
+        @apply flex gap-5
+    }
+
+    .burger__menu
+    {
+        @apply md:hidden;
+    }
+
+    .burger__menu span
+    {
+        @apply w-[1.5rem] h-[.2rem] bg-gray-700 block rounded-full transition-all
+    }
+
+    .burger__menu span:nth-child(2)
+    {
+        @apply my-1
+    }
+
+    .header__wrapper
+    {
+        @apply flex items-center justify-between
+    }
+
+
+    .burger__menu.open span:first-child
+    {
+        @apply transform translate-y-[10px] rotate-[225deg] transition-all
+    }
+
+    .burger__menu.open span:nth-child(2)
+    {
+        @apply opacity-0 transition-all
+    }
+
+    .burger__menu.open span:last-child
+    {
+        @apply transform translate-y-[-7px] rotate-[-225deg] transition-all
+    }
+}
+
+@layer utilities
+{
+    .btn{
+        @apply inline-block py-[.5rem] px-[1rem] rounded-full border-transparent border-[1px] 
+        text-sm font-medium hover:scale-[1.1];
+    }
+
+    .btn.bg--dark
+    {
+        @apply bg-black text-light;
+    }
+
+    .btn.bg--light
+    {
+        @apply bg-light border-[2px] text-black border-black;
+    }
+}
+
+
+/* .starbucksimages__wrapper
+{
+    @apply lg:p-[2rem] lg:px-[37rem] lg:flex lg:flex-row items-center justify-center
+}
+
+
+.starbucksimages__wrapper:nth-child(odd)
+{
+    @apply mb-8;
+}
+
+.starbucksimages__wrapper:nth-child(even)
+{
+   
+    @apply lg:flex-row-reverse;
+}
+
+.starbucksimages .starbucksimages__wrapper .starbucksimages__left img
+{
+    @apply lg:w-[450rem];
+}  */
+
+/* .starbucksimages .starbucksimages__right
+{
+    @apply  lg:w-[60rem] lg:h-[47rem] lg:pt-[12rem];
+} */
+/* 
+.starbucksimages .starbucksimages__right 
+{
+    @apply text-center;
+}
+
+.starbucksimages .starbucksimages__right h3
+{
+    @apply font-bold text-[2rem] pb-4 lg:text-[2rem];
+}
+
+.starbucksimages .starbucksimages__right p
+{
+    @apply font-medium lg:text-[1.7rem] pb-4;
+}
+
+.starbucksimages .starbucksimages__right a
+{
+    @apply text-[1.2rem] lg:text-[1.3rem] p-[1rem] bg-transparent; 
+} */
+
+.starbucksimages
+{
+    @apply lg:p-12;
+}
+
+.starbucksimages__wrapper
+{
+    @apply  lg:flex lg:flex-row items-center justify-center   lg:w-[100%]
+    lg:max-w-[90rem] mx-auto;
+} 
+
+
+.starbucksimages__wrapper:nth-child (odd)
+{
+    @apply mb-8;
+}
+
+.starbucksimages__wrapper:nth-child(even)
+{
+   
+    @apply lg:flex-row-reverse;
+}
+
+
+.starbucksimages__wrapper .starbucksimages__right
+{
+   @apply p-[5rem] py-[10.5rem] text-center
+}
+
+.starbucksimages__wrapper .starbucksimages__right h3
+{
+   @apply text-[3rem] text-center font-medium
+}
+
+.starbucksimages__wrapper .starbucksimages__left img
+{
+    @apply w-[70rem] h-[37rem]
+}
+
+
