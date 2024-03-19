@@ -6,7 +6,7 @@
 
 .container
 {
-    @apply max-w-[90rem] p-6 w-full mx-auto;
+    @apply max-w-[100rem] p-6 w-full mx-auto;
 }
 
 @layer components
@@ -115,18 +115,13 @@
 @layer utilities
 {
     .btn{
-        @apply inline-block py-[.5rem] px-[1rem] rounded-full border-transparent border-[1px] 
-        text-sm font-medium hover:scale-[1.1];
+        @apply inline-block py-[.5rem] px-[1rem] rounded-full border-transparent border-[1px] text-sm font-medium hover:scale-[0.9]
     }
-
-    .btn.bg--dark
-    {
+    .btn.{
         @apply bg-black text-light;
     }
-
-    .btn.bg--light
-    {
-        @apply bg-light border-[2px] text-black border-black;
+    .btn.bg--light{
+        @apply bg-light text-black border-black border-[1px] hover:bg-zinc-200
     }
 }
 
@@ -140,29 +135,33 @@
 }
 .banner__item{
     @apply mx-auto md:grid md:grid-cols-[_2fr,_2fr] 
-    md:items-center md:max-w-[90rem] 
+    md:items-center md:max-w-[100rem] 
+}
+.banner__item img
+{
+    @apply md:w-[100rem];
 }
 .banner__item:nth-child(even) img{
-    @apply md:order-2
+    @apply md:order-2 
 }
 .banner__text{
     @apply text-center py-3 flex flex-col gap-6  
 }
 
 .banner__item:nth-child(odd) h2{
-    @apply text-3xl font-semibold text-dark
+    @apply text-3xl font-semibold text-black
     md:text-5xl md:max-w-[30rem] md:mx-auto
 }
 .banner__item:nth-child(odd) p{
-    @apply text-2xl text-dark px-[2rem] max-w-[35rem] mx-auto md:text-[1.8rem]
+    @apply text-2xl text-black px-[2rem] max-w-[35rem] mx-auto md:text-[1.8rem]
 }
 
 .banner__item:nth-child(even) h2{
-    @apply text-2xl font-semibold text-dark
+    @apply text-2xl font-semibold text-black
     md:text-[1.7rem] md:max-w-[25rem] md:mx-auto
 }
 .banner__item:nth-child(even) p{
-    @apply text-xl text-dark max-w-[25rem] mx-auto md:text-[1.7rem]
+    @apply text-xl text-black max-w-[25rem] mx-auto md:text-[1.7rem]
 }
 .banner__item:last-child h2,.banner__item:last-child p{
     @apply text-light
@@ -273,4 +272,150 @@
     @apply font-medium md:p-4;
 }
 
+/* REWARDS */
 
+.rBanner
+{
+    @apply bg-bituinBanner min-h-[600px] bg-lberde 
+    bg-cover bg-right-bottom 
+    text-center 
+    flex
+    md:bg-starBanner md:bg-left
+    md:text-left md:items-center;
+}
+.rBanner .rBanner__wrapper h1
+{
+    @apply text-[2.3rem]
+    font-semibold text-wrap;
+}
+
+.rBanner .rBanner__wrapper p
+{
+    @apply py-6 md:text-[1.5rem];
+}
+.rBanner .rBanner__wrapper a:last-child
+{
+    @apply inline-block
+}
+
+/* COFFEE TAB */
+
+
+.coffee__nav
+{
+    @apply bg-[#aed5c4] pt-10;
+}
+
+.coffee__nav h4
+{
+    @apply text-2xl font-semibold
+    text-center md:pt-[1rem] md:pb-[2rem] font-bold
+}
+
+.coffee__nav ul
+{
+    @apply flex items-center justify-center mt-6
+}
+
+.coffee__nav ul li 
+{
+    @apply px-4 pb-3 border-b-4 border-transparent;
+}
+.coffee__nav ul li.active
+{
+    @apply border-b-4 border-berde 
+}
+
+.coffee__nav ul li a{
+    @apply text-lg font-semibold md:text-[1.5rem]
+}
+
+.coffee__tab
+{
+    @apply bg-[#90c6b5] relative h-[500px] md:h-[250px];
+}
+
+.coffee__item
+{
+    @apply absolute opacity-0 transition-all top-7  
+    md:grid md:grid-cols-[_2fr,_2fr] md:items-center md:max-w-[40rem]
+    md:left-[32%];
+}
+
+.coffee__item img
+{
+    @apply object-cover
+}
+
+.coffee__item.active
+{
+    @apply opacity-100 transition-all;
+}
+.coffee__text h5
+{
+    @apply text-xl font-semibold text-center md:text-left 
+}
+
+.coffee__text p 
+{
+    @apply text-center md:text-left
+}
+.coffee__text
+{
+    @apply flex flex-col gap-4 mt-4 ;
+}
+
+/* EASY */
+.easy 
+{
+    @apply py-10 md:py-[7rem]
+}
+
+.easy .easy__text
+{
+    @apply flex flex-col gap-2 items-center md:pb-7
+
+}
+.easy .easy__text h3
+{
+    @apply font-bold text-[1.8rem]
+    md:text-[2rem]
+}
+
+.easy .easy__wrapper
+{
+    @apply md:grid md:grid-cols-3
+}
+
+.easy .easy__wrapper .easy__cards .easy__items
+{
+    @apply flex flex-row gap-3 items-center
+    md:flex md:flex-col md:gap-3  md:justify-center
+}
+.easy .easy__wrapper .easy__cards .easy__items h4
+{
+    @apply pb-3;
+}
+
+.easy .easy__wrapper .easy__cards
+{
+    @apply p-6
+}
+.easy .easy__wrapper .easy__cards .easy__items h4
+{
+    @apply inline-block text-[1.2rem] font-bold
+}
+
+
+.easy .easy__wrapper .easy__cards .easy__items span
+{
+    @apply text-[2rem] border-berde border-[3px] 
+    rounded-full py-[.4rem] px-7 text-berde font-bold
+    md:px-7
+
+}
+.easy .easy__wrapper .easy__cards  p
+{
+    @apply text-[1rem] mt-2 ml-[4.5rem] text-justify md:text-center
+    md:text-[1.2rem];
+} 

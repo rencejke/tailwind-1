@@ -2,7 +2,11 @@ module.exports = {
   content: ["./dist/**/*.{html,js}"],
   theme: {
     extend: {
-
+      backgroundImage:
+      {
+          starBanner: "url(../dist/img/xl-hero-desktop_2021.png)",
+          bituinBanner: "url(../dist/img/hero-mobile_2021.webp)"
+        },
       colors: {
        
         dark: '#2b2b2b2b',
@@ -16,6 +20,7 @@ module.exports = {
         sec6: '#958bc6',
         sec7: '#c9591d',
         sec8: '#002e1f',
+        lberde: "#d4e9e2",
       }
 
     },
