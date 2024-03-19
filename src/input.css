@@ -130,91 +130,147 @@
     }
 }
 
+/* BANNER */
 
-/* .starbucksimages__wrapper
+.banner{
+    @apply py-6
+}
+.banner__wrapper{
+    @apply flex flex-col gap-6 
+}
+.banner__item{
+    @apply mx-auto md:grid md:grid-cols-[_2fr,_2fr] 
+    md:items-center md:max-w-[90rem] 
+}
+.banner__item:nth-child(even) img{
+    @apply md:order-2
+}
+.banner__text{
+    @apply text-center py-3 flex flex-col gap-6  
+}
+
+.banner__item:nth-child(odd) h2{
+    @apply text-3xl font-semibold text-dark
+    md:text-5xl md:max-w-[30rem] md:mx-auto
+}
+.banner__item:nth-child(odd) p{
+    @apply text-2xl text-dark px-[2rem] max-w-[35rem] mx-auto md:text-[1.8rem]
+}
+
+.banner__item:nth-child(even) h2{
+    @apply text-2xl font-semibold text-dark
+    md:text-[1.7rem] md:max-w-[25rem] md:mx-auto
+}
+.banner__item:nth-child(even) p{
+    @apply text-xl text-dark max-w-[25rem] mx-auto md:text-[1.7rem]
+}
+.banner__item:last-child h2,.banner__item:last-child p{
+    @apply text-light
+}
+
+.banner__item:first-child{
+    @apply bg-[#d5d0ea]
+}
+.banner__item:nth-child(2){
+    @apply bg-[#f2f0eb]
+}
+.banner__item:nth-child(3){
+    @apply bg-[#cee8c9]
+}
+.banner__item:nth-child(4){
+    @apply bg-[#f5cac4]
+}
+.banner__item:nth-child(5){
+    @apply bg-[#dbe6f2]
+}
+.banner__item:nth-child(6){
+    @apply bg-[#d5d0ea]
+}
+.banner__item:nth-child(7){
+    @apply bg-[#e99264]
+}
+.banner__item:last-child{
+    @apply bg-[#006241]
+}
+.links
 {
-    @apply lg:p-[2rem] lg:px-[37rem] lg:flex lg:flex-row items-center justify-center
+    @apply py-4 shadow md:border-t-2;
+}
+
+.links__item ul
+{
+    @apply max-h-[0rem] overflow-hidden transition-all 
+    flex flex-col gap-6 md:max-h-[50rem] md:pt-6;
+}
+
+.links__item ul.open
+{
+    @apply max-h-[50rem] pt-6 transition-all;
+}
+
+.links__item ul li a
+{
+    @apply text-gray-500 hover:text-black;
+}
+
+.links__item h4
+{
+    @apply flex items-center justify-between
+    font-semibold hover:cursor-pointer;
+}
+
+.links__wrapper
+{
+    @apply grid grid-cols-1 gap-10 
+    md:grid md:grid-cols-6;
+}
+
+.links__item h4 i
+{
+    @apply transition-all md:hidden;
+}
+.links__item h4 i.open
+{
+@apply transform rotate-180 transition-all;
+}
+
+.links .links__under
+{
+    @apply mb-4;
+}
+
+.links .links__under .links__under__wrapper .links__under__wrapperItem1 ul
+{
+    @apply flex flex-row gap-4
+}
+.links .links__under .links__under__wrapper .links__under__wrapperItem1
+{
+    @apply py-6 md:border-t mt-4;
+}
+
+.links .links__under .links__under__wrapper .links__under__wrapperItem1 ul li a 
+{
+    @apply text-[2rem] ;
+}
+.links .links__under .links__under__wrapper .links__under__wrapperItem2 ul
+{
+    @apply flex flex-col gap-4 md:flex md:flex-row
+}
+
+.links .links__under .links__under__wrapper .links__under__wrapperItem2 ul li:nth-child(even)
+{
+    @apply md:border-l md:border-r md:border-black md:border-spacing-4;
+}
+
+.links .links__under .links__under__wrapper .links__under__wrapperItem2 ul li:last-child
+{
+    @apply border-r-0;
 }
 
 
-.starbucksimages__wrapper:nth-child(odd)
+.links .links__under .links__under__wrapper .links__under__wrapperItem2 ul li a
 {
-    @apply mb-8;
-}
-
-.starbucksimages__wrapper:nth-child(even)
-{
-   
-    @apply lg:flex-row-reverse;
-}
-
-.starbucksimages .starbucksimages__wrapper .starbucksimages__left img
-{
-    @apply lg:w-[450rem];
-}  */
-
-/* .starbucksimages .starbucksimages__right
-{
-    @apply  lg:w-[60rem] lg:h-[47rem] lg:pt-[12rem];
-} */
-/* 
-.starbucksimages .starbucksimages__right 
-{
-    @apply text-center;
-}
-
-.starbucksimages .starbucksimages__right h3
-{
-    @apply font-bold text-[2rem] pb-4 lg:text-[2rem];
-}
-
-.starbucksimages .starbucksimages__right p
-{
-    @apply font-medium lg:text-[1.7rem] pb-4;
-}
-
-.starbucksimages .starbucksimages__right a
-{
-    @apply text-[1.2rem] lg:text-[1.3rem] p-[1rem] bg-transparent; 
-} */
-
-.starbucksimages
-{
-    @apply lg:p-12;
-}
-
-.starbucksimages__wrapper
-{
-    @apply  lg:flex lg:flex-row items-center justify-center   lg:w-[100%]
-    lg:max-w-[90rem] mx-auto;
-} 
-
-
-.starbucksimages__wrapper:nth-child (odd)
-{
-    @apply mb-8;
-}
-
-.starbucksimages__wrapper:nth-child(even)
-{
-   
-    @apply lg:flex-row-reverse;
-}
-
-
-.starbucksimages__wrapper .starbucksimages__right
-{
-   @apply p-[5rem] py-[10.5rem] text-center
-}
-
-.starbucksimages__wrapper .starbucksimages__right h3
-{
-   @apply text-[3rem] text-center font-medium
-}
-
-.starbucksimages__wrapper .starbucksimages__left img
-{
-    @apply w-[70rem] h-[37rem]
+    @apply font-medium md:p-4;
 }
 
 
